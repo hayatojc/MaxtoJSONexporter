@@ -31,10 +31,10 @@ macroScript MaxSceneExport
 			--selection.position = [0,0,0]
 			python.ExecuteFile @"I:\dev_JC\_Python\MaxExporter\MaxExporter_v4.py"
 			
-			-- Ritriangulate
+			-- Poly Convert
 			modPanel.addModToSelection (Turn_to_Poly ()) ui:on 
 			for obj in selection do (
-						obj.modifiers[#Turn_to_Poly].limitPolySize = on
+				    obj.modifiers[#Turn_to_Poly].limitPolySize = on
 			            obj.modifiers[#Turn_to_Poly].maxPolySize = 3
 			)
 			
